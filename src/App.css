@@ -1,0 +1,178 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-origin: #18171F;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #18171F; /* Tło niewypełnionej części */
+  outline: none;
+  position: relative;
+}
+
+/* Webkit (Chrome, Safari, Edge) */
+.slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, #A4FFAF var(--progress), #18171F var(--progress));
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  position: relative;
+  top: -10px; /* Wyśrodkowanie kciuka */
+}
+
+.slider::-webkit-slider-thumb:hover{
+  background: #18171F;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #04AA6D;
+}
+
+/* Firefox */
+.slider::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: #18171F; /* Tło toru */
+}
+
+.slider::-moz-range-progress {
+  height: 8px;
+  background: #FF5733; /* Kolor postępu */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  border: none;
+  cursor: pointer;
+}
+
+/* Microsoft (Edge) */
+.slider::-ms-track {
+  width: 100%;
+  height: 8px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.slider::-ms-fill-lower {
+  background: #FF5733; /* Kolor postępu */
+}
+
+.slider::-ms-fill-upper {
+  background: #18171F; /* Tło niewypełnionej części */
+}
+
+.slider::-ms-thumb {
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+/* Gradient dla Webkit przez JavaScript */
+.slider {
+  --progress: 0%;
+}
+
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.hidden-checkbox:checked ~ .checkmark {
+  background-color: #A4FFAF;
+  border-color: #A4FFAF;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 0px;
+  width: 7px;
+  height: 14px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.hidden-checkbox:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Hover efekt */
+.custom-checkbox:hover .checkmark {
+  border-color: #A4FFAF;
+}
