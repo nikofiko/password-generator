@@ -4,7 +4,7 @@ import copy from '../assets/images/icon-copy.svg'
 const Result = ({result, count}) => {
   console.log(result)
   return (
-    <div className='pt-[50px] lg:pt-[100px] flex flex-col items-center'>
+    <div className='pt-[50px] lg:pt-[25px] flex flex-col items-center'>
       <h1 className='text-blue text-[18px] lg:text-[22px]'>Password Generator</h1>
       <div className='mt-[16px] lg:mt-[32px] flex min-w-[350px] max-w-[350px] lg:min-w-[540px] justify-between bg-gray px-[16px] lg:px-[32px] items-center py-[16px]'>
         <div>
